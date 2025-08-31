@@ -173,7 +173,7 @@ def configure_file_logging(logger_name: str = None) -> bool:
         log_file_dir = os.path.dirname(log_file_dir)
         log_file_path = os.path.join(log_file_dir, 'mcp_server_debug.log')
 
-        file_handler = logging.FileHandler(log_file_path, mode='a')
+        file_handler = logging.FileHandler(log_file_path, mode='a', encoding='utf-8')
         file_handler.setLevel(logging.DEBUG)
 
         file_formatter = logging.Formatter(
